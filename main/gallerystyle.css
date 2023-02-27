@@ -8,8 +8,17 @@ header {
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
   }
   
+  .header-left h1{
+	font-family: "Segoe Script", cursive;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	width: 20px;
+	float:right;
+  }
   /* Logo styles */
-  .logo {
+  header .logo {
 	font-family: "Segoe Script", cursive;
 	font-size: 24px;
 	font-weight: bold;
@@ -62,8 +71,9 @@ header {
 	cursor: pointer;
 	font-weight: bold;
   }
-  
+  /* Cart UI*/
   .cart {
+	float: right;
 	position: relative;
   }
   
@@ -82,6 +92,92 @@ header {
 	text-align: center;
 	line-height: 15px;
   }
+
+  .cart-container {
+	display: none;
+	position: relative;
+	width: 0;
+	height:0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+  }
+  .cart-container.show {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	padding: 10px;
+	right:auto;
+	width: 20%;
+	height: 70vh;
+	border: 2px;
+	border-style: ridge;
+	border-color: #d3d0d2;
+	background-color: rgba(245, 230, 212, 0.836);
+	z-index: 9999;
+  }
+
+  .cart-header {
+	display: flex;
+	justify-content: space-between;
+  }
+  .cart-header button{
+	background-color: #ffffffa9;
+	width: 50px;
+	height: 50px;
+  }
+
+  .cart-header button:hover{
+	background-color: #c0b9b9;
+  }
+  /* Set basic table styles */
+table {
+	margin-top: 30%;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 800px;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+  }
+  
+  /* Style the table header */
+  thead {
+	margin-top: 40px;
+	background-color: #ffffffa9;
+	color: #000000;
+  }
+  
+  thead th {
+	padding: 10px;
+  }
+  
+  /* Style the table body */
+  tbody tr:nth-child(even) {
+	background-color: #080808;
+  }
+  
+  tbody td {
+	text-align: center;
+	background-color: #ffffff;
+	color: #0a0a0a;
+	padding: 10px;
+  }
+  
+  /* Style the table footer */
+  tfoot {
+	background-color: #ffffff;
+	color: #000000;
+  }
+  
+  tfoot td {
+	
+	background-color: #ffffff;
+	color: #000000;
+	padding: 10px;
+	text-align: center;
+
+  }
+
+  
   /*Body style*/
   body .container{
 	font-family: "Segoe Script", cursive;
@@ -95,7 +191,7 @@ header {
   
   body .container-gallery{
 	display: flex;
-	width: 70vw;
+	width: 60vw;
   }
 
   body .panel {
@@ -105,21 +201,25 @@ header {
 	border-radius: 50px;
 	color: #fff;
 	cursor: pointer;
-	height: 80vh;
+	height: 70vh;
 	flex: .5;
 	margin: 10px;
 	position: relative;
 	transition: flex 0.7s ease-in;
   }
 
+
   body .panel h3{
-	font-size:20px;
+	font-family: "Monaco", monospace;
+	font-size:24px;
 	position:absolute;
 	bottom: 20px;
 	left: 20px;
 	margin: 0;
 	opacity: 0;
-	color: #ee1212;
+	padding: 5px 10px;
+	background-color: #ffffff;
+	color: #333;
   }
 
   .panel.active {
@@ -127,19 +227,7 @@ header {
 
   }
   body .panel.active h3{
-	opacity: 1;
-	transition: opacity 0.4s, ease-in 0.8s;
-  }
-  body .panel p{
-	font-size:20px;
-	position:absolute;
-	bottom: 20px;
-	right: 20px;
-	margin: 0;
-	opacity: 0;
-	color: aqua;
-  }
-  body .panel.active p{
+
 	opacity: 1;
 	transition: opacity 0.4s, ease-in 0.8s;
   }
@@ -148,16 +236,33 @@ header {
 	margin-top: 10px;
 	padding: 5px 10px;
 	background-color: #4CAF50;
-	color: white;
+	color: rgb(255, 251, 251);
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
 	opacity: 0;
   }
+  body .panel p{
+	font-family: "Monaco", monospace;
+	font-size:20px;
+	position:absolute;
+	bottom: 20px;
+	right: 20px;
+	margin: 0;
+	opacity: 0;
+	padding: 5px 10px;
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+  }
+  body .panel.active p{
+	opacity: 1;
+	transition: opacity 0.4s, ease-in 0.8s;
+  }
 
   .panel.active .add-to-cart-btn{
 	opacity: 1;
   }
+
   
   @media(max-width:480px){
 	.container{

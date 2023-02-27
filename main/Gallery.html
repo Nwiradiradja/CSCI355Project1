@@ -7,46 +7,97 @@
     </head>
     <body>
         <header>
-            <a href="#" class="logo"><span>Auriel</span></a>
+            <div class="header-left">
+                <img src="logo.png" class="logo" width="50px" height="50px" style="float: left;">
+                <h1>uriel</h1>
+            </div>
             <nav>
             <ul>
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="#About">About</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contactus.html">Contact us</a></li>
             </ul>
             </nav>
             <div class= "header-right">
-                <button class="help">Help</button>
-                <button class="cart">Cart (0)</button>
+                <button class="cart" id="cart-button">Cart</button>
             </div>
         </header>
         
+    
+        <!---Body for Gallery-->
+        <!---Tried to implement draggable to cart-->
         <div class="container">
             <div class="container-gallery">
-                <div class="panel active" style="background-image: url('print1.jpg')">
+                <div class="panel active" style="background-image: url('print1.jpg')" draggable="true">
                     <h3>Print 1</h3>
                     <p>$15.99</p>
                     <button class="add-to-cart-btn">Add to cart</button>
                 </div>
-                <div class="panel" style="background-image: url('print2.jpg')">
+                <div class="panel" style="background-image: url('print2.jpg')" draggable="true">
                     <h3>Print 2</h3>
                     <p>$15.99</p>
                     <button class="add-to-cart-btn">Add to cart</button>
                 </div>
-                <div class="panel" style="background-image: url('print3.jpg')">
+                <div class="panel" style="background-image: url('print3.jpg')" draggable="true">
                     <h3>Print 3</h3>
                     <p>$15.99</p>
                     <button class="add-to-cart-btn">Add to cart</button>
                 </div>
-                <div class="panel" style="background-image: url('print4.jpg')">
+                <div class="panel" style="background-image: url('print4.jpg')" draggable="true">
                     <h3>Print 4</h3>
                     <p>$15.99</p>
                     <button class="add-to-cart-btn">Add to cart</button>
                 </div>
-                <div class="panel" style="background-image: url('print3.jpg')">
-                    <h3>Print 3</h3>
+                <div class="panel" style="background-image: url('print5.jpg')" draggable="true">
+                    <h3>Print 5</h3>
                     <p>$15.99</p>
                     <button class="add-to-cart-btn">Add to cart</button>
+                </div> 
+            </div>
+            <div class="cart-container" id="cart-container">
+                <div class="cart-header">
+                  <h3>Cart</h3>
+                  <button class="close-cart" id="close-cart">Close</button>
+                </div>
+                <div class="cart-items">
+                    <table>
+                        <thead>
+                          <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Cart items will be dynamically generated here -->
+                          <td>Print 1</td>
+                          <td>2</td>
+                          <td>15.99</td>
+                          <td>32.98</td>
+                        </tbody>
+                        <tbody>
+                            <!-- Cart items will be dynamically generated here -->
+                            <td>Print 2</td>
+                            <td>1</td>
+                            <td>15.99</td>
+                            <td>15.99</td>
+                          </tbody>
+                          <tbody>
+                            <!-- Cart items will be dynamically generated here -->
+                            <td>Print 3</td>
+                            <td>1</td>
+                            <td>15.99</td>
+                            <td>15.99</td>
+                          </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="3">Total:</td>
+                            <td>65.96</td>
+                          </tr>
+                        </tfoot>
+                      </table>
                 </div>
             </div>
         </div>

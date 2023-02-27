@@ -8,15 +8,25 @@ header {
   background-color: #fff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
+.header-left h1{
+	font-family: "Segoe Script", cursive;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	width: 20px;
+	float:right;
+  }
+  /* Logo styles */
+  header .logo {
+	font-family: "Segoe Script", cursive;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+  }
 
-/* Logo styles */
-.logo {
-  font-family: "Segoe Script", cursive;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
+
 
 /* Navigation styles */
 nav {
@@ -27,6 +37,8 @@ nav {
 }
 
 ul {
+  font-family: "Segoe Script", cursive;
+  font-size: 18px;
   display: flex;
   list-style: none;
   margin: 0;
@@ -156,4 +168,50 @@ a {
   height: 30px;
 }
 
+.aboutus{
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 40%;
+  height: 70%;
+  margin: 10 auto;
+  position: relative;
+  top: 30px;
+  left: 0px;
 
+  outline-width: 2px;
+  
+}
+.aboutus h1{
+  font-family: "Segoe Script", cursive;
+}
+.aboutus p{
+  font-family: "Caveat", cursive;
+}
+
+.contactus {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 40%;
+  height: 70%;
+  margin: 10 auto;
+  position: relative;
+  top: 30px;
+  left: 0px;
+
+  outline-width: 2px;
+}
+.contactus label{
+  float: left;
+}
+.contactus input{
+  margin-left: auto;
+  margin-right: auto;
+}
